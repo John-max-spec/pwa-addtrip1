@@ -1,0 +1,54 @@
+/* TravelList.css */
+
+.travel-list {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .travel-list h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+  }
+  
+  .travel-list p {
+    text-align: center;
+    font-size: 1rem;
+    color: #777;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* Go Back Button */
+.go-back {
+    background: none;
+    border: none;
+    color: #0a3d62;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 3rem;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+  }
+  
+.go-back:hover {
+    text-decoration: underline;
+  }
+  
+  
+  /* Optional: Make trip cards display in a column layout on larger screens */
+  @media (min-width: 768px) {
+    .travel-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+  

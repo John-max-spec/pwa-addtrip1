@@ -5,11 +5,11 @@ import Todo from "./components/Todo";
 import { nanoid } from "nanoid";
 import HomePage from './pages/Home'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import TravelList from './components/TravelList';
+import TravelList from './components/TravelList';
 import { BASE_URL } from './utils/config'
 import axios from 'axios'
 import { clearQueue, getQueue } from './utils/offlineQueue'
-// import TravelItem from './components/TravelItem'
+import TravelItem from './components/TravelItem'
 // import { TripProvider } from './context/TripContext'
 
 function usePrevious(value) {
@@ -29,8 +29,6 @@ const FILTER_MAP = {
 const FILTER_NAMES = Object.keys(FILTER_MAP);
 
 export default function App(props) {
-
-
 
   useEffect(() => {
     const syncQueue = async () => {
@@ -210,7 +208,7 @@ if (id === task.id) {
     id: id,
     name: name,
     completed: true,
-    location: { latitude: "", longitude: "", error: "" },
+    location: { latitude: "48.8584", longitude: "2.2945", error: "" },
   };
 
   
@@ -256,6 +254,8 @@ if (id === task.id) {
         <Routes>
         
         <Route path="/" element={<HomePage />} />
+         <Route path="/trip-item" element={<TravelItem />} />
+        <Route path="/trip-list" element={<TravelList />} />
         {/* <Route
           path="/trip-list"
           element={<TravelList tasks={tasks} setTasks={setTasks} />}
