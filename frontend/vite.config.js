@@ -1,11 +1,9 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-export default defineConfig(({ mode }) => {
+export default defineConfig(() => {
   return {
     plugins: [react()],
-  
-    
-    base: mode === 'production' ? '/todo/' : '/',
+    base: './', // 设置相对路径
   };
 });
